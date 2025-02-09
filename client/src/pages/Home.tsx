@@ -28,10 +28,10 @@ export default function Home() {
       >
         <motion.div variants={item} className="text-center space-y-2">
           <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-primary to-muted-foreground bg-clip-text text-transparent">
-            John Doe
+            kaci bedi
           </h1>
           <p className="text-muted-foreground">
-            Digital Creator & Content Maker
+            where curiosity for knowledge meets the pursuit of a better life :)
           </p>
         </motion.div>
 
