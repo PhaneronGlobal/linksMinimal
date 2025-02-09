@@ -16,7 +16,7 @@ export function SocialButton({ icon: Icon, label, href, hoverClass }: SocialButt
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "flex items-center gap-3 px-6 py-4 w-full rounded-xl border border-gray-200/30 bg-white/5 backdrop-blur-sm transition-all duration-300",
+        "flex items-center gap-3 px-6 py-4 w-full rounded-[30px] border border-gray-200/30 bg-white/10 backdrop-blur-lg transition-all duration-300",
         "hover:scale-105",
         hoverClass
       )}
