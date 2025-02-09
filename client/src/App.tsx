@@ -4,10 +4,13 @@ import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
 
 function App() {
+  const basePath = import.meta.env.BASE_URL || '/';
   return (
     <QueryClientProvider client={queryClient}>
-      <Home />
-      <Toaster />
+      <div className="app-container">
+        <Home />
+        <Toaster />
+      </div>
     </QueryClientProvider>
   );
 }
