@@ -8,11 +8,6 @@ import Home from "@/pages/Home";
 // Static base configuration
 const base = "/linksMinimal";
 
-// Create a makePublicUrl helper to handle path prefixing
-function makePublicUrl(path: string) {
-  return `${base}${path}`;
-}
-
 // Create a custom hook for prefixed routing
 function useLocation() {
   // Get the current location
@@ -21,7 +16,13 @@ function useLocation() {
   // Remove the base prefix for internal routing
   const path = location.startsWith(base) ? location.slice(base.length) : location;
 
-  return [path];
+  // Navigation function that adds the base prefix
+  const navigate = (to: string) => {
+    window.history.pushState(null, "", base + to);
+    return true;
+  };
+
+  return [path, navigate];
 }
 
 function AppRouter() {
