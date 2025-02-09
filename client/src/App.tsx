@@ -5,9 +5,11 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 
+// Create a base router component that handles the base path
 function Router() {
   return (
-    <Switch>
+    // Use the same base as configured in vite.config.ts
+    <Switch base="/linksMinimal">
       <Route path="/" component={Home} />
       <Route component={NotFound} />
     </Switch>
