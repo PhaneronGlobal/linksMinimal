@@ -1,14 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Links | Kaci Bedi</title>
-    <link rel="stylesheet" href="./src/index.css" />
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Use a RELATIVE path, not an absolute /linksMinimal/ path -->
     <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
