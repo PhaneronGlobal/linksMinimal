@@ -35,8 +35,9 @@ export default function Home() {
           </p>
         </motion.div>
 
-        <motion.div variants={item} className="space-y-4">
-          <style jsx global>{`
+        <motion.div variants={item} className="space-y-4 w-full max-w-lg px-4">
+          <style>
+            {`
             .instagram-hover:hover {
               background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
               border-color: transparent;
@@ -52,7 +53,8 @@ export default function Home() {
               border-color: black;
               color: white;
             }
-          `}</style>
+            `}
+          </style>
           <SocialButton
             icon={SiInstagram}
             label="Instagram"
