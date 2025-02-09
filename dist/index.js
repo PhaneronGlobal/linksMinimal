@@ -33,14 +33,13 @@ var vite_config_default = defineConfig({
     }
   },
   root: path.resolve(__dirname, "client"),
-  // Tells Vite to look in client/ for index.html
   base: "/linksMinimal/",
-  // GitHub Pages base path
+  // ✅ Set correct base path for GitHub Pages
   publicDir: path.resolve(__dirname, "public"),
-  // If you have a public/ folder
+  // ✅ Ensure public files (like favicon) are copied
   build: {
     outDir: path.resolve(__dirname, "dist"),
-    // Final build goes to dist/
+    // ✅ Fix output directory for GitHub Pages
     emptyOutDir: true
   }
 });

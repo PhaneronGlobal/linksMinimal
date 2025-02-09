@@ -1,4 +1,3 @@
-// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
@@ -17,11 +16,12 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "shared"),
     },
   },
-  root: path.resolve(__dirname, "client"),          // Tells Vite to look in client/ for index.html
-  base: "/linksMinimal/",                           // GitHub Pages base path
-  publicDir: path.resolve(__dirname, "public"),     // If you have a public/ folder
+  root: path.resolve(__dirname, "client"),
+  base: "/linksMinimal/", // ✅ Set correct base path for GitHub Pages
+  publicDir: path.resolve(__dirname, "public"), // ✅ Ensure public files (like favicon) are copied
   build: {
-    outDir: path.resolve(__dirname, "dist"),        // Final build goes to dist/
+    outDir: path.resolve(__dirname, "dist"), // ✅ Fix output directory for GitHub Pages
     emptyOutDir: true,
   },
 });
+
