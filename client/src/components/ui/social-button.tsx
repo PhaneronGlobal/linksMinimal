@@ -1,28 +1,37 @@
-
-import { IconType } from "react-icons";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { type IconType } from "react-icons";
 
 interface SocialButtonProps {
   icon: IconType;
   label: string;
   href: string;
-  hoverClass?: string;
+  hoverClass: string;
 }
 
 export function SocialButton({ icon: Icon, label, href, hoverClass }: SocialButtonProps) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cn(
-        "flex items-center gap-3 px-6 py-4 w-full rounded-[30px] border border-gray-200/30 bg-white/10 backdrop-blur-lg transition-all duration-300",
-        "hover:scale-105",
-        hoverClass
-      )}
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="w-full"
     >
-      <Icon className="w-6 h-6" />
-      <span className="text-lg font-medium">{label}</span>
-    </a>
+      <Button
+        asChild
+        variant="outline"
+        size="lg"
+        className={`w-full bg-gradient-to-r from-background to-muted border-2 transition-all duration-300 group ${hoverClass}`}
+      >
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-3"
+        >
+          <Icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+          <span className="font-medium">{label}</span>
+        </a>
+      </Button>
+    </motion.div>
   );
 }
