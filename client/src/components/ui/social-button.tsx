@@ -6,9 +6,10 @@ interface SocialButtonProps {
   icon: IconType;
   label: string;
   href: string;
+  hoverClass: string;
 }
 
-export function SocialButton({ icon: Icon, label, href }: SocialButtonProps) {
+export function SocialButton({ icon: Icon, label, href, hoverClass }: SocialButtonProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
@@ -19,7 +20,7 @@ export function SocialButton({ icon: Icon, label, href }: SocialButtonProps) {
         asChild
         variant="outline"
         size="lg"
-        className="w-full bg-gradient-to-r from-background to-muted border-2 transition-all duration-300 hover:from-muted hover:to-background group"
+        className={`w-full bg-gradient-to-r from-background to-muted border-2 transition-all duration-300 group ${hoverClass}`}
       >
         <a
           href={href}

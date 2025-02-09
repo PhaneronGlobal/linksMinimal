@@ -36,20 +36,40 @@ export default function Home() {
         </motion.div>
 
         <motion.div variants={item} className="space-y-4">
+          <style jsx global>{`
+            .instagram-hover:hover {
+              background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+              border-color: transparent;
+              color: white;
+            }
+            .youtube-hover:hover {
+              background: #FF0000;
+              border-color: #FF0000;
+              color: white;
+            }
+            .tiktok-hover:hover {
+              background: black;
+              border-color: black;
+              color: white;
+            }
+          `}</style>
           <SocialButton
             icon={SiInstagram}
             label="Instagram"
             href="https://instagram.com/yourusername"
+            hoverClass="instagram-hover"
           />
           <SocialButton
             icon={SiYoutube}
             label="YouTube"
             href="https://youtube.com/@yourusername"
+            hoverClass="youtube-hover"
           />
           <SocialButton
             icon={SiTiktok}
             label="TikTok"
             href="https://tiktok.com/@yourusername"
+            hoverClass="tiktok-hover"
           />
         </motion.div>
       </motion.div>
