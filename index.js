@@ -33,7 +33,6 @@ var vite_config_default = defineConfig({
     }
   },
   root: path.resolve(__dirname, "client"),
-  base: "/linksMinimal/",
   // ✅ Set correct base path for GitHub Pages
   publicDir: path.resolve(__dirname, "public"),
   // ✅ Ensure public files (like favicon) are copied
