@@ -56,19 +56,19 @@ export default function Home() {
           <SocialButton
             icon={SiInstagram}
             label="Instagram"
-            href="https://instagram.com/yourusername"
+            href="https://instagram.com/kaciibedii"
             hoverClass="instagram-hover"
           />
           <SocialButton
             icon={SiYoutube}
             label="YouTube"
-            href="https://youtube.com/@yourusername"
+            href="https://youtube.com/@ytkaci"
             hoverClass="youtube-hover"
           />
           <SocialButton
             icon={SiTiktok}
             label="TikTok"
-            href="https://tiktok.com/@yourusername"
+            href="https://tiktok.com/@kacibedi"
             hoverClass="tiktok-hover"
           />
         </motion.div>
