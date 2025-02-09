@@ -99,11 +99,6 @@
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
-  },
-
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
   }
 
 }
