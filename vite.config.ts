@@ -17,7 +17,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
-  base: "/linksMinimal/", // ✅ Set correct base path for GitHub Pages
+   // ✅ Set correct base path for GitHub Pages
   publicDir: path.resolve(__dirname, "public"), // ✅ Ensure public files (like favicon) are copied
   build: {
     outDir: path.resolve(__dirname, "dist"), // ✅ Fix output directory for GitHub Pages
